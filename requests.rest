@@ -1,0 +1,42 @@
+// ----- Users endponits ----- //
+
+### Sign Up
+POST http://localhost:3306/users/signup
+Content-Type: application/json
+
+{
+    "fullName": "João Martins",
+    "email": "joao@gmail.com",
+    "password": "123456",
+    "role": "normal"
+}
+
+### Login
+POST http://localhost:3306/users/login
+Content-Type: application/json
+
+{
+    "email": "gioivieira@gmail.com",
+    "password": "123456"
+}
+
+// ----- Bands endponits ----- //
+
+### Create Band
+POST http://localhost:3306/bands/create_band
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3OTM1NzYzOSwiZXhwIjoxNjc5NDQ0MDM5fQ.vVPPRBjy4fxlkhaOOmxUKY7gjJyp4rJv2j4ai-pajpM
+
+{
+    "name": "House",
+    "musicGenre": "Reggae",
+    "responsible": "Josh"
+}
+
+### Get Band
+GET http://localhost:3306/bands/band
+Content-Type: application/json
+
+{
+    "bandId": "a31f621d-faa7-44a0-9a74-7de2673018f7"
+}
