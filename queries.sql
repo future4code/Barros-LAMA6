@@ -17,8 +17,8 @@ CREATE TABLE IF NOT EXISTS lama_bands (
 CREATE TABLE IF NOT EXISTS lama_shows (
     id VARCHAR(255) PRIMARY KEY,
     week_day ENUM("friday", "saturday", "sunday") NOT NULL, 
-    start_time VARCHAR(50) NOT NULL,
-    end_time VARCHAR(50) NOT NULL, 
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL, 
     band_id VARCHAR(255) NOT NULL,
     FOREIGN KEY (band_id) REFERENCES lama_bands (id)
 );

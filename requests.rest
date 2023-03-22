@@ -25,7 +25,7 @@ Content-Type: application/json
 ### Create Band
 POST http://localhost:3306/bands/create_band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3OTM1NzYzOSwiZXhwIjoxNjc5NDQ0MDM5fQ.vVPPRBjy4fxlkhaOOmxUKY7gjJyp4rJv2j4ai-pajpM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3OTUyNzgwMSwiZXhwIjoxNjc5NjE0MjAxfQ.zfBycC4Nwh56Nt0y8u0c6RbdSbqvUt0cuc3Bx58R_k0
 
 {
     "name": "House",
@@ -38,5 +38,19 @@ GET http://localhost:3306/bands/band
 Content-Type: application/json
 
 {
+    "bandId": "a31f621d-faa7-44a0-9a74-7de2673018f7"
+}
+
+// ----- Shows endponits ----- //
+
+### Create Show
+POST http://localhost:3306/shows/create_show
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3OTUyNzgwMSwiZXhwIjoxNjc5NjE0MjAxfQ.zfBycC4Nwh56Nt0y8u0c6RbdSbqvUt0cuc3Bx58R_k0
+
+{
+    "weekDay": "friday",
+    "startTime": "19:00:00", 
+    "endTime": "24:00:00",
     "bandId": "a31f621d-faa7-44a0-9a74-7de2673018f7"
 }

@@ -17,7 +17,6 @@ import IdGenerator from "../services/IdGenerator"
 
 const bandsDatabase = new BandsDatabase()
 const idGenerator = new IdGenerator()
-const hashManager = new HashManager()
 const authenticator = new Authenticator()
 
 class BandsBusiness {

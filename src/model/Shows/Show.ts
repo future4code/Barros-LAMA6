@@ -1,16 +1,10 @@
-enum ShowDay {
-    FRIDAY = "friday",
-    SATURDAY = "saturday",
-    SUNDAY = "sunday"
-}
-
 class Show {
     constructor(
         private id: string,
-        private week_day: ShowDay,
+        private week_day: string,
         private start_time: string, 
         private end_time: string,
-        band_id: string
+        private band_id: string
     ){
     }
 }
