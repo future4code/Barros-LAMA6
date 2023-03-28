@@ -5,3 +5,7 @@ export interface CreateShowInputDTO {
     bandId: string,
     token: string
 }
+
+export interface GetAllShowsInputDTO {
+    token: string
+}

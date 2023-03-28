@@ -5,4 +5,6 @@ export const showsRouter = express.Router()
 
 const showsController = new ShowsController()
 
+showsRouter.get("/", showsController.getAllShows)
+
 showsRouter.post("/create_show", showsController.createShow)

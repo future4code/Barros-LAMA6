@@ -16,7 +16,7 @@ POST http://localhost:3306/users/login
 Content-Type: application/json
 
 {
-    "email": "gioivieira@gmail.com",
+    "email": "joao@gmail.com",
     "password": "123456"
 }
 
@@ -43,14 +43,19 @@ Content-Type: application/json
 
 // ----- Shows endponits ----- //
 
+### Get All Shows
+GET http://localhost:3306/shows
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3OTk1ODI2NCwiZXhwIjoxNjgwMDQ0NjY0fQ.hLTcoTg9c1MdiRmfULQI8tUmWb7Syh0xuSR86mHehCU
+
 ### Create Show
 POST http://localhost:3306/shows/create_show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY3OTUyNzgwMSwiZXhwIjoxNjc5NjE0MjAxfQ.zfBycC4Nwh56Nt0y8u0c6RbdSbqvUt0cuc3Bx58R_k0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU2ZmY2NGY1LWI5YmUtNGFkZS1hYTI4LWVkYjg2M2UwN2FjMiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2Nzk5NjQwMzMsImV4cCI6MTY4MDA1MDQzM30.VMtQRZNoIkDpBIXHMkZ8y3-OLXIAWR0EFYZR4X8Yejc
 
 {
-    "weekDay": "friday",
-    "startTime": "19:00:00", 
-    "endTime": "24:00:00",
+    "weekDay": "sunday",
+    "startTime": "17:00:00", 
+    "endTime": "18:00:00",
     "bandId": "a31f621d-faa7-44a0-9a74-7de2673018f7"
 }
