@@ -7,4 +7,6 @@ const showsController = new ShowsController()
 
 showsRouter.get("/", showsController.getAllShows)
 
+showsRouter.get("/schedule", showsController.getFestivalDaySchedule)
+
 showsRouter.post("/create_show", showsController.createShow)

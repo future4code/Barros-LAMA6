@@ -2,7 +2,7 @@ import CustomError from "../CustomError";
 
 class MissingCreateBandInfos extends CustomError {
     constructor(){
-        super(422, "User token, band name, band music genre and band responsible required.")
+        super(422, "Band name, band music genre and band responsible required.")
     }
 }
 

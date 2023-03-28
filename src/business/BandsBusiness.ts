@@ -24,7 +24,7 @@ class BandsBusiness {
         try {
             if(!input.token){
                 throw new MissingUserToken()
-            } if(!input.token && !input.name && !input.musicGenre && !input.responsible){
+            } if(!input.name && !input.musicGenre && !input.responsible){
                 throw new MissingCreateBandInfos()
             } if(!input.name){
                 throw new MissingName()

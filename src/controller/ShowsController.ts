@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import ShowsBusiness from "../business/ShowsBusiness"
-import { CreateShowInputDTO, GetAllShowsInputDTO } from "../model/Shows/ShowsDTO"
+import { CreateShowInputDTO, GetAllShowsInputDTO, GetFestivalDayScheduleInputDTO } from "../model/Shows/ShowsDTO"
 
 const showsBusiness = new ShowsBusiness()
 
@@ -34,6 +34,20 @@ class ShowsController {
             res.status(201).send("Show created.")
         } catch (err: any) {
             res.status(err.statusCode || 400).send(err.message || err.sqlMessage)            
+        }
+    }
+
+    getFestivalDaySchedule = async (req: Request, res: Response) => {
+        try {
+            const input: GetFestivalDayScheduleInputDTO = {
+                weekDay: req.query.week_day as string
+            }
+
+            const weekDaySchedule = await showsBusiness.getFestivalDaySchedule(input)
+
+            res.status(200).send(weekDaySchedule)
+        } catch (err: any) {
+            res.status(err.statusCode || 400).send(err.message || err.sqlMessage)
         }
     }
 }

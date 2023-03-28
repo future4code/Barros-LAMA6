@@ -9,3 +9,7 @@ export interface CreateShowInputDTO {
 export interface GetAllShowsInputDTO {
     token: string
 }
+
+export interface GetFestivalDayScheduleInputDTO {
+    weekDay: string
+}

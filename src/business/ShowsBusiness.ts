@@ -1,10 +1,17 @@
 import ShowsDatabase from "../data/ShowsDatabase"
+import MissingBandId from "../errors/BandsErrors.ts/MissingBandId"
 import CustomError from "../errors/CustomError"
+import InvalidWeekDay from "../errors/ShowsErrors.ts/InvalidWeekDay"
+import MissingCreateShowInfos from "../errors/ShowsErrors.ts/MissingCreateBandInfos"
+import MissingEndTime from "../errors/ShowsErrors.ts/MissingEndTime"
+import MissingStartTime from "../errors/ShowsErrors.ts/MissingStartTime"
+import MissingWeekDay from "../errors/ShowsErrors.ts/MissingWeekDay"
 import { EndAfterStart, EndTimeShows, FullHoursShows, MaximumTime, SameTimeShows, StartTimeShows, UsedTime } from "../errors/ShowsErrors.ts/MistakesInShowTimes"
+import ShowExisting from "../errors/ShowsErrors.ts/ShowExisting"
 import MissingUserToken from "../errors/UsersErrors.ts/MissingUserToken"
 import WrongUserRole from "../errors/UsersErrors.ts/WrongUserRole"
 import Show from "../model/Shows/Show"
-import { CreateShowInputDTO, GetAllShowsInputDTO } from "../model/Shows/ShowsDTO"
+import { CreateShowInputDTO, GetAllShowsInputDTO, GetFestivalDayScheduleInputDTO } from "../model/Shows/ShowsDTO"
 import Authenticator from "../services/Authenticator"
 import IdGenerator from "../services/IdGenerator"
 
@@ -17,7 +24,7 @@ class ShowsBusiness {
         try {
             if(!input.token){
                 throw new MissingUserToken()
-            }
+            } 
 
             authenticator.getTokenPayload(input.token)
 
@@ -30,15 +37,39 @@ class ShowsBusiness {
     createShow = async (input: CreateShowInputDTO) => {
         try {
 
-            const userData = authenticator.getTokenPayload(input.token)
+            if(!input.token){
+                throw new MissingUserToken()
+            } if(!input.weekDay && !input.startTime && !input.endTime && !input.bandId){
+                throw new MissingCreateShowInfos()
+            } if(!input.weekDay){
+                throw new MissingWeekDay()
+            } if(input.weekDay.toLowerCase() !== "friday" 
+                && input.weekDay.toLowerCase() !== "saturday" 
+                && input.weekDay.toLowerCase() !== "sunday"){
+                throw new InvalidWeekDay()
+            } if(!input.startTime){
+                throw new MissingStartTime()
+            } if(!input.endTime){
+                throw new MissingEndTime()
+            } if(!input.bandId){
+                throw new MissingBandId()
+            }
 
-            const startTime = input.startTime.split(":")
-            const endTime = input.endTime.split(":")
-            const showTime = Number(endTime[0]) - Number(startTime[0])
+            const findShow = await showsDatabase.findShow(input.bandId)
+
+            if(findShow.length > 0){
+                throw new ShowExisting()
+            }
+
+            const userData = authenticator.getTokenPayload(input.token)
 
             if(userData.role !== "admin"){
                 throw new WrongUserRole()
-            }        
+            }
+
+            const startTime = input.startTime.split(":")
+            const endTime = input.endTime.split(":")
+            const showTime = Number(endTime[0]) - Number(startTime[0])       
 
             if(Number(startTime[0]) === Number(endTime[0])){
                 throw new SameTimeShows()
@@ -76,6 +107,23 @@ class ShowsBusiness {
             )
 
             await showsDatabase.createShow(newShow)
+        } catch (err: any) {
+            throw new CustomError(err.statusCode, err.message)
+        }
+    }
+
+    getFestivalDaySchedule = async (input: GetFestivalDayScheduleInputDTO) => {
+        try {
+            if(!input.weekDay){
+                throw new MissingWeekDay()
+            } if(input.weekDay.toLowerCase() !== "friday" 
+                && input.weekDay.toLowerCase() !== "saturday" 
+                && input.weekDay.toLowerCase() !== "sunday"){
+                throw new InvalidWeekDay()
+            }
+
+            return await showsDatabase.getFestivalDaySchedule(input.weekDay)
+    
         } catch (err: any) {
             throw new CustomError(err.statusCode, err.message)
         }
