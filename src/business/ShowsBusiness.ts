@@ -1,15 +1,15 @@
 import ShowsDatabase from "../data/ShowsDatabase"
-import MissingBandId from "../errors/BandsErrors.ts/MissingBandId"
+import MissingBandId from "../errors/BandsErrors/MissingBandId"
 import CustomError from "../errors/CustomError"
-import InvalidWeekDay from "../errors/ShowsErrors.ts/InvalidWeekDay"
-import MissingCreateShowInfos from "../errors/ShowsErrors.ts/MissingCreateBandInfos"
-import MissingEndTime from "../errors/ShowsErrors.ts/MissingEndTime"
-import MissingStartTime from "../errors/ShowsErrors.ts/MissingStartTime"
-import MissingWeekDay from "../errors/ShowsErrors.ts/MissingWeekDay"
-import { EndAfterStart, EndTimeShows, FullHoursShows, MaximumTime, SameTimeShows, StartTimeShows, UsedTime } from "../errors/ShowsErrors.ts/MistakesInShowTimes"
-import ShowExisting from "../errors/ShowsErrors.ts/ShowExisting"
-import MissingUserToken from "../errors/UsersErrors.ts/MissingUserToken"
-import WrongUserRole from "../errors/UsersErrors.ts/WrongUserRole"
+import InvalidWeekDay from "../errors/ShowsErrors/InvalidWeekDay"
+import MissingCreateShowInfos from "../errors/ShowsErrors/MissingCreateBandInfos"
+import MissingEndTime from "../errors/ShowsErrors/MissingEndTime"
+import MissingStartTime from "../errors/ShowsErrors/MissingStartTime"
+import MissingWeekDay from "../errors/ShowsErrors/MissingWeekDay"
+import { EndAfterStart, EndTimeShows, FullHoursShows, MaximumTime, SameTimeShows, StartTimeShows, UsedTime } from "../errors/ShowsErrors/MistakesInShowTimes"
+import ShowExisting from "../errors/ShowsErrors/ShowExisting"
+import MissingUserToken from "../errors/UsersErrors/MissingUserToken"
+import WrongUserRole from "../errors/UsersErrors/WrongUserRole"
 import Show from "../model/Shows/Show"
 import { CreateShowInputDTO, GetAllShowsInputDTO, GetFestivalDayScheduleInputDTO } from "../model/Shows/ShowsDTO"
 import Authenticator from "../services/Authenticator"
@@ -69,7 +69,7 @@ class ShowsBusiness {
 
             const startTime = input.startTime.split(":")
             const endTime = input.endTime.split(":")
-            const showTime = Number(endTime[0]) - Number(startTime[0])       
+            const showTime = Number(endTime[0]) - Number(startTime[0])     
 
             if(Number(startTime[0]) === Number(endTime[0])){
                 throw new SameTimeShows()

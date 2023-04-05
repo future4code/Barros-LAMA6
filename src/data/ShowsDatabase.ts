@@ -17,7 +17,10 @@ class ShowsDatabase extends BaseDatasabe {
     }
 
     getFestivalDaySchedule = async (weekDay: string) => {
-        return await ShowsDatabase.connection(this.TABLE_NAME).select("*").where("week_day", weekDay).orderBy("start_time")
+        return await ShowsDatabase.connection(this.TABLE_NAME).select("lama_bands.name", "lama_bands.music_genre")
+        .where("week_day", weekDay)
+        .join("lama_bands", "band_id", "=", "lama_bands.id")
+        .orderBy("start_time")
     }
 }
 

@@ -22,3 +22,17 @@ CREATE TABLE IF NOT EXISTS lama_shows (
     band_id VARCHAR(255) NOT NULL UNIQUE,
     FOREIGN KEY (band_id) REFERENCES lama_bands (id)
 );
+
+CREATE TABLE IF NOT EXISTS lama_events (
+    id VARCHAR(255) PRIMARY KEY,
+    event_name VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS lama_tickets (
+    id VARCHAR(255) PRIMARY KEY,
+    ticket_name VARCHAR(100) NOT NULL UNIQUE,
+    ticket_quantity INT NOT NULL, 
+    tickets_sold INT NOT NULL DEFAULT '0',
+    event_id VARCHAR(255) NOT NULL, 
+    FOREIGN KEY (event_id) REFERENCES lama_events (id)
+);

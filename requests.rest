@@ -25,12 +25,12 @@ Content-Type: application/json
 ### Create Band
 POST http://localhost:3306/bands/create_band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDA0NTk1NiwiZXhwIjoxNjgwMTMyMzU2fQ.pneiwiP1l7A5iMNgo-5QkgDdRZ2usmL17xqkzj8jWWM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
 
 {
-    "name": "Bruno Mars",
+    "name": "Adele",
     "musicGenre": "Pop",
-    "responsible": "Bruno"
+    "responsible": "Adele"
 }
 
 ### Get Band
@@ -46,7 +46,7 @@ Content-Type: application/json
 ### Get All Shows
 GET http://localhost:3306/shows
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDA0NTk1NiwiZXhwIjoxNjgwMTMyMzU2fQ.pneiwiP1l7A5iMNgo-5QkgDdRZ2usmL17xqkzj8jWWM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
 
 ### Get Festival Day Schedule
 GET http://localhost:3306/shows/schedule?week_day=sunday
@@ -55,12 +55,26 @@ Content-Type: application/json
 ### Create Show
 POST http://localhost:3306/shows/create_show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDA0NTk1NiwiZXhwIjoxNjgwMTMyMzU2fQ.pneiwiP1l7A5iMNgo-5QkgDdRZ2usmL17xqkzj8jWWM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
 
 {
     "weekDay": "sunday",
-    "startTime": "18:00:00", 
-    "endTime": "20:00:00",
-    "bandId": "6efd16b2-65fc-4d1c-92ce-fa6671641580"
+    "startTime": "14:00:00", 
+    "endTime": "15:00:00",
+    "bandId": "4cd82228-ca62-461c-9959-3c733b68f2e0"
 }
 
+// ----- Events endponits ----- //
+
+### Get All Events
+GET http://localhost:3306/events
+Content-Type: application/application/json
+
+### Create Event
+POST http://localhost:3306/events/create_event
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
+
+{
+    "eventName": "Caju Festival"
+}
