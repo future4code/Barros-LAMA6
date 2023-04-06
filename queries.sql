@@ -36,3 +36,4 @@ CREATE TABLE IF NOT EXISTS lama_tickets (
     event_id VARCHAR(255) NOT NULL, 
     FOREIGN KEY (event_id) REFERENCES lama_events (id)
 );
+

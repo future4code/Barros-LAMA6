@@ -25,7 +25,7 @@ Content-Type: application/json
 ### Create Band
 POST http://localhost:3306/bands/create_band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
 
 {
     "name": "Adele",
@@ -46,7 +46,7 @@ Content-Type: application/json
 ### Get All Shows
 GET http://localhost:3306/shows
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
 
 ### Get Festival Day Schedule
 GET http://localhost:3306/shows/schedule?week_day=sunday
@@ -55,7 +55,7 @@ Content-Type: application/json
 ### Create Show
 POST http://localhost:3306/shows/create_show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
 
 {
     "weekDay": "sunday",
@@ -73,8 +73,25 @@ Content-Type: application/application/json
 ### Create Event
 POST http://localhost:3306/events/create_event
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDY1MTE3MiwiZXhwIjoxNjgwNzM3NTcyfQ.dTkjjve7gCtBTBpQhUa1s0U2ZNJXNfQSpyZOUYIfdmg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
 
 {
     "eventName": "Caju Festival"
+}
+
+// ----- Tickets endponits ----- //
+
+### Get All Events Tickets
+GET http://localhost:3306/tickets
+Content-Type: application/application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+
+### Create Event Tickets
+POST http://localhost:3306/tickets/create_event_tickets
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+
+{
+    "ticketQuantity": 200,
+    "eventId": "07220826-c12e-417f-b481-e72b0b59e077"
 }

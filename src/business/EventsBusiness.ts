@@ -11,7 +11,7 @@ import Event from "../model/Events/Event"
 
 const eventsDatabase = new EventsDatabase()
 const idGenerator = new IdGenerator()
-const authenticator = new Authenticator
+const authenticator = new Authenticator()
 
 class EventsBusiness {
     getAllEvents = async () => {
