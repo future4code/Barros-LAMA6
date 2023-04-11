@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { CreateEventTicketsDTO, GetAllEventTicketsInputDTO } from "../model/Tickets/EventTicketsDTO"
+import { BuyTicketInputDTO, CreateEventTicketsInputDTO, GetAllEventTicketsInputDTO } from "../model/Tickets/EventTicketsDTO"
 import TicketsBusiness from "../business/TicketsBusiness"
 
 const ticketsBusiness = new TicketsBusiness()
@@ -21,7 +21,7 @@ class TicketsController {
 
     createEventTickets = async (req: Request, res: Response) => {
         try {
-            const input: CreateEventTicketsDTO = {
+            const input: CreateEventTicketsInputDTO = {
                 ticketQuantity: req.body.ticketQuantity, 
                 eventId: req.body.eventId,
                 token: req.headers.authorization as string
@@ -34,6 +34,23 @@ class TicketsController {
             res.status(err.statusCode || 400).send(err.message || err.sqlMessage)            
         }
     }
+
+    buyTicket = async (req: Request, res: Response) => {
+        try {
+            const input: BuyTicketInputDTO = {
+                amountOfTicketsToBuy: req.body.amountOfTicketsToBuy,
+                eventName: req.body.eventName,
+                token: req.headers.authorization as string
+            }
+
+            await ticketsBusiness.buyTicket(input)
+
+            res.status(201).send("Tickets buyed.")
+        } catch (err: any) {
+            res.status(err.statusCode || 400).send(err.message || err.sqlMessage)  
+        }
+    }
+
 }
 
 export default TicketsController

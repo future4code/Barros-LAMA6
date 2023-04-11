@@ -25,7 +25,7 @@ Content-Type: application/json
 ### Create Band
 POST http://localhost:3306/bands/create_band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
 
 {
     "name": "Adele",
@@ -46,7 +46,7 @@ Content-Type: application/json
 ### Get All Shows
 GET http://localhost:3306/shows
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
 
 ### Get Festival Day Schedule
 GET http://localhost:3306/shows/schedule?week_day=sunday
@@ -55,7 +55,7 @@ Content-Type: application/json
 ### Create Show
 POST http://localhost:3306/shows/create_show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
 
 {
     "weekDay": "sunday",
@@ -73,7 +73,7 @@ Content-Type: application/application/json
 ### Create Event
 POST http://localhost:3306/events/create_event
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
 
 {
     "eventName": "Caju Festival"
@@ -84,14 +84,24 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYt
 ### Get All Events Tickets
 GET http://localhost:3306/tickets
 Content-Type: application/application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
 
 ### Create Event Tickets
 POST http://localhost:3306/tickets/create_event_tickets
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MDc0MjQyNywiZXhwIjoxNjgwODI4ODI3fQ.QI9OhxttEU_Cof0o0Rod-IlvI7ndzLyY6gi48Y-IU-o
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
 
 {
     "ticketQuantity": 200,
     "eventId": "07220826-c12e-417f-b481-e72b0b59e077"
+}
+
+### Buy Ticket
+POST http://localhost:3306/tickets/create_event_tickets_trade
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+
+{
+    "amountOfTicketsToBuy": 150,
+    "eventName": "Caju Festival"
 }
