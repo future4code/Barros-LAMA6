@@ -8,7 +8,7 @@ Content-Type: application/json
     "fullName": "João Martins",
     "email": "joao@gmail.com",
     "password": "123456",
-    "role": "normal"
+    "role": "admin"
 }
 
 ### Login
@@ -16,7 +16,7 @@ POST http://localhost:3306/users/login
 Content-Type: application/json
 
 {
-    "email": "gioivieira@gmail.com",
+    "email": "joao@gmail.com",
     "password": "123456"
 }
 
@@ -25,12 +25,12 @@ Content-Type: application/json
 ### Create Band
 POST http://localhost:3306/bands/create_band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
 
 {
-    "name": "Adele",
-    "musicGenre": "Pop",
-    "responsible": "Adele"
+    "name": "The Kooks",
+    "musicGenre": "Indie",
+    "responsible": "Luke"
 }
 
 ### Get Band
@@ -38,7 +38,7 @@ GET http://localhost:3306/bands/band
 Content-Type: application/json
 
 {
-    "bandId": "a31f621d-faa7-44a0-9a74-7de2673018f7"
+    "bandId": "36c46fc5-318e-40fb-8d74-78006ae263d6"
 }
 
 // ----- Shows endponits ----- //
@@ -46,7 +46,7 @@ Content-Type: application/json
 ### Get All Shows
 GET http://localhost:3306/shows
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
 
 ### Get Festival Day Schedule
 GET http://localhost:3306/shows/schedule?week_day=sunday
@@ -55,13 +55,13 @@ Content-Type: application/json
 ### Create Show
 POST http://localhost:3306/shows/create_show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
 
 {
     "weekDay": "sunday",
     "startTime": "14:00:00", 
     "endTime": "15:00:00",
-    "bandId": "4cd82228-ca62-461c-9959-3c733b68f2e0"
+    "bandId": "36c46fc5-318e-40fb-8d74-78006ae263d6"
 }
 
 // ----- Events endponits ----- //
@@ -73,10 +73,10 @@ Content-Type: application/application/json
 ### Create Event
 POST http://localhost:3306/events/create_event
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
 
 {
-    "eventName": "Caju Festival"
+    "eventName": "Indie Festival"
 }
 
 // ----- Tickets endponits ----- //
@@ -84,24 +84,24 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYt
 ### Get All Events Tickets
 GET http://localhost:3306/tickets
 Content-Type: application/application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
 
 ### Create Event Tickets
 POST http://localhost:3306/tickets/create_event_tickets
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
 
 {
     "ticketQuantity": 200,
-    "eventId": "07220826-c12e-417f-b481-e72b0b59e077"
+    "eventId": "b631d4f4-4860-44b2-aa3b-23ec8dba98d8"
 }
 
 ### Buy Ticket
 POST http://localhost:3306/tickets/create_event_tickets_trade
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTE3MDM1MCwiZXhwIjoxNjgxMjU2NzUwfQ.lBxjTVjrl77pyiKH809ZcsyZon44cxV9Jay1tmEh3nc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
 
 {
-    "amountOfTicketsToBuy": 150,
-    "eventName": "Caju Festival"
+    "amountOfTicketsToBuy": 20,
+    "eventName": "Indie Festival"
 }

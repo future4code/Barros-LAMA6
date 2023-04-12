@@ -91,6 +91,8 @@ class TicketsBusiness {
                 throw new MissingAmountOfTicketsToBuy()
             } if(!input.eventName){
                 throw new MissingEventName()
+            } if(input.amountOfTicketsToBuy < 0){
+                throw new InvalidAmountOfTicketsToBuy()
             }
 
             const userData = authenticator.getTokenPayload(input.token)
@@ -109,7 +111,7 @@ class TicketsBusiness {
                     .updateEventTicketsInfos(eventTickets.event_id, 
                     Number(eventTickets.ticket_quantity) - Number(input.amountOfTicketsToBuy), 
                     eventTickets.tickets_sold + Number(input.amountOfTicketsToBuy))
-                } if(Number(eventTickets.ticket_quantity) < Number(input.amountOfTicketsToBuy)){
+                } else {
                     throw new InvalidAmountOfTicketsToBuy()
                 }
             }
