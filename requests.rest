@@ -1,7 +1,7 @@
 // ----- Users endponits ----- //
 
 ### Sign Up
-POST http://localhost:3306/users/signup
+POST https://lama-969k.onrender.com/users/signup
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ### Login
-POST http://localhost:3306/users/login
+POST https://lama-969k.onrender.com/users/login
 Content-Type: application/json
 
 {
@@ -23,9 +23,9 @@ Content-Type: application/json
 // ----- Bands endponits ----- //
 
 ### Create Band
-POST http://localhost:3306/bands/create_band
+POST https://lama-969k.onrender.com/bands/create_band
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
 
 {
     "name": "The Kooks",
@@ -34,46 +34,46 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYt
 }
 
 ### Get Band
-GET http://localhost:3306/bands/band
+GET https://lama-969k.onrender.com/bands/band
 Content-Type: application/json
 
 {
-    "bandId": "36c46fc5-318e-40fb-8d74-78006ae263d6"
+    "bandId": "947033bd-32dd-418f-aaa2-f836ada1830f"
 }
 
 // ----- Shows endponits ----- //
 
 ### Get All Shows
-GET http://localhost:3306/shows
+GET https://lama-969k.onrender.com/shows
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
 
 ### Get Festival Day Schedule
-GET http://localhost:3306/shows/schedule?week_day=sunday
+GET https://lama-969k.onrender.com/shows/schedule?week_day=sunday
 Content-Type: application/json
 
 ### Create Show
-POST http://localhost:3306/shows/create_show
+POST https://lama-969k.onrender.com/shows/create_show
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
 
 {
     "weekDay": "sunday",
     "startTime": "14:00:00", 
     "endTime": "15:00:00",
-    "bandId": "36c46fc5-318e-40fb-8d74-78006ae263d6"
+    "bandId": "947033bd-32dd-418f-aaa2-f836ada1830f"
 }
 
 // ----- Events endponits ----- //
 
 ### Get All Events
-GET http://localhost:3306/events
+GET https://lama-969k.onrender.com/events
 Content-Type: application/application/json
 
 ### Create Event
-POST http://localhost:3306/events/create_event
+POST https://lama-969k.onrender.com/events/create_event
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
 
 {
     "eventName": "Indie Festival"
@@ -82,26 +82,26 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYt
 // ----- Tickets endponits ----- //
 
 ### Get All Events Tickets
-GET http://localhost:3306/tickets
+GET https://lama-969k.onrender.com/tickets
 Content-Type: application/application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
 
 ### Create Event Tickets
-POST http://localhost:3306/tickets/create_event_tickets
+POST https://lama-969k.onrender.com/tickets/create_event_tickets
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
 
 {
     "ticketQuantity": 200,
-    "eventId": "b631d4f4-4860-44b2-aa3b-23ec8dba98d8"
+    "eventId": "6d99ebf8-47f4-4f49-b4a8-8813e523082d"
 }
 
 ### Buy Ticket
-POST http://localhost:3306/tickets/create_event_tickets_trade
+POST https://lama-969k.onrender.com/tickets/create_event_tickets_trade
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE2YTBhOTkwLWUyMWYtNGM0ZC05OGNjLTI5NzI1NjMyODA2NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzMzUwMSwiZXhwIjoxNjgxNDE5OTAxfQ.3bHM9u2zam_fCfx_UsImkPSM3wEiag7azJDLA-u5e5E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
 
 {
-    "amountOfTicketsToBuy": 20,
+    "amountOfTicketsToBuy": 10,
     "eventName": "Indie Festival"
 }
