@@ -1,0 +1,107 @@
+// ----- Users endponits ----- //
+
+### Sign Up
+POST https://lama-969k.onrender.com/users/signup
+Content-Type: application/json
+
+{
+    "fullName": "João Martins",
+    "email": "joao@gmail.com",
+    "password": "123456",
+    "role": "admin"
+}
+
+### Login
+POST https://lama-969k.onrender.com/users/login
+Content-Type: application/json
+
+{
+    "email": "joao@gmail.com",
+    "password": "123456"
+}
+
+// ----- Bands endponits ----- //
+
+### Create Band
+POST https://lama-969k.onrender.com/bands/create_band
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
+
+{
+    "name": "The Kooks",
+    "musicGenre": "Indie",
+    "responsible": "Luke"
+}
+
+### Get Band
+GET https://lama-969k.onrender.com/bands/band
+Content-Type: application/json
+
+{
+    "bandId": "947033bd-32dd-418f-aaa2-f836ada1830f"
+}
+
+// ----- Shows endponits ----- //
+
+### Get All Shows
+GET https://lama-969k.onrender.com/shows
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
+
+### Get Festival Day Schedule
+GET https://lama-969k.onrender.com/shows/schedule?week_day=sunday
+Content-Type: application/json
+
+### Create Show
+POST https://lama-969k.onrender.com/shows/create_show
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
+
+{
+    "weekDay": "sunday",
+    "startTime": "14:00:00", 
+    "endTime": "15:00:00",
+    "bandId": "947033bd-32dd-418f-aaa2-f836ada1830f"
+}
+
+// ----- Events endponits ----- //
+
+### Get All Events
+GET https://lama-969k.onrender.com/events
+Content-Type: application/application/json
+
+### Create Event
+POST https://lama-969k.onrender.com/events/create_event
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
+
+{
+    "eventName": "Indie Festival"
+}
+
+// ----- Tickets endponits ----- //
+
+### Get All Events Tickets
+GET https://lama-969k.onrender.com/tickets
+Content-Type: application/application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
+
+### Create Event Tickets
+POST https://lama-969k.onrender.com/tickets/create_event_tickets
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
+
+{
+    "ticketQuantity": 200,
+    "eventId": "6d99ebf8-47f4-4f49-b4a8-8813e523082d"
+}
+
+### Buy Ticket
+POST https://lama-969k.onrender.com/tickets/create_event_tickets_trade
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhM2U0YWJmLWRlZjEtNDgxMC1hNmQwLTA3YWJjMjY5ZWMyYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4MTMzNDkyMiwiZXhwIjoxNjgxNDIxMzIyfQ.iH0vRufnpJCZG9yANZ35Q4mB76AUPfoEqFcJx-ZPFBs
+
+{
+    "amountOfTicketsToBuy": 10,
+    "eventName": "Indie Festival"
+}
